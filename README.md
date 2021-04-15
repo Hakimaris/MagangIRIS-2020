@@ -184,5 +184,7 @@ int main() {
 
 ## sumber yang digunakan
 https://bundet.com/d/995-pengertian-pointer-dalam-c
+
 https://github.com/AlproITS/DasarPemrograman/wiki/Modul-4:-Pointer-dan-Struct#deklarasi-variabel-pointer
+
 https://www.hackerrank.com/challenges/pointer-in-c/problem
