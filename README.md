@@ -496,12 +496,12 @@ int main(){
     OwO.biodata();
 
     dolphin uwu;
-    cin>>nama;
     cout<<"this dolphin name is: "<<endl;
-    cin>>umur;
+    cin>>nama;
     cout<<"this dolphin age is: "<<endl;
-    cin>>kampung;
+    cin>>umur;
     cout<<"this dolphin origin is: "<<endl;
+    cin>>kampung;
     uwu.set_value(nama,umur,kampung);
     uwu.biodata();
 }
