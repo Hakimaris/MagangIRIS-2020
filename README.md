@@ -481,28 +481,34 @@ class dolphin : public hewan{
 };
 
 int main(){
-    string nama;
-    int umur;
-    string kampung;
+    string namaZebra;
+    int umurZebra;
+    string kampungZebra;
 
     zebra OwO;
-    cout<<"this zebra name is: "<<endl;
-    cin>>nama;
-    cout<<"this zebra age is: "<<endl;
-    cin>>umur;
-    cout<<"this zebra origin is: "<<endl;
-    cin>>kampung;
-    OwO.set_value(nama,umur,kampung);
+    cout<<"nama zebra ini: "<<endl;
+    cin>>namaZebra;
+    cout<<"umur zebra: "<<endl;
+    cin>>umurZebra;
+    cout<<"zebra ini lahir di: "<<endl;
+    cin>>kampungZebra;
+    OwO.set_value(namaZebra,umurZebra,kampungZebra);
     OwO.biodata();
 
+    string namaLumba;
+    int umurLumba;
+    string kampungLumba;
+
     dolphin uwu;
-    cout<<"this dolphin name is: "<<endl;
-    cin>>nama;
-    cout<<"this dolphin age is: "<<endl;
-    cin>>umur;
-    cout<<"this dolphin origin is: "<<endl;
-    cin>>kampung;
-    uwu.set_value(nama,umur,kampung);
+    cout<<"\nnama lumba-lumba: "<<endl;
+    cin>>namaLumba;
+    cout<<"umur lumba-lumba: "<<endl;
+    cin>>umurLumba;
+    cout<<"lumba-lumba ini lahir di: "<<endl;
+    cin>>kampungLumba;
+    
+    uwu.set_value(namaLumba,umurLumba,kampungLumba);
     uwu.biodata();
+}
 }
 ```
