@@ -188,3 +188,321 @@ https://bundet.com/d/995-pengertian-pointer-dalam-c
 https://github.com/AlproITS/DasarPemrograman/wiki/Modul-4:-Pointer-dan-Struct#deklarasi-variabel-pointer
 
 https://www.hackerrank.com/challenges/pointer-in-c/problem
+
+# latihan
+### nomor 1
+```
+#include <iostream>
+using namespace std;
+//Write a class having two private variables and one member function which 
+//will return the area of the rectangle
+class Shape {
+    public:
+    int x,y;
+    int luas(){ // bentuk punya luas
+        return x+y;
+    }
+};
+
+int main () {
+
+    Shape kotak;
+    cin>>kotak.x;
+    cin>>kotak.y;
+    cout<<kotak.luas();
+    return 0;
+}
+```
+### nomor 2
+```
+#include <iostream>
+using namespace std;
+
+class operasi{
+	public:
+	int a,b;
+	operasi(int first,int second){
+		a=first; 
+		b=second;
+	}
+    int tambah(){
+		return a+b;
+	}
+};
+
+
+int main (){
+	int num1,num2;
+	cin>>num1;
+	cin>>num2;
+	operasi jumlah(num1,num2);
+	cout<<jumlah.tambah();
+	return 0;
+}
+```
+### nomor 3
+```
+#include <iostream>
+
+using namespace std;
+
+class Student{
+
+    public:
+    char *name;
+    double mark1; 
+    double mark2;
+
+    Student(char* namae, double ma1, double ma2) {
+        name = namae;
+        mark1 = ma1;
+        mark2 = ma2;
+    }
+
+    float calc_media() {
+        return (mark1 + mark2) / 2;
+    }
+
+    void disp() {
+        cout << "Student:" << name << " \nmedia:"<< calc_media() <<"\n";
+    }
+};
+
+int main()
+{
+    char nama[1000];
+    int m1, m2;
+
+    cin >> nama;
+    cin >> m1;
+    cin >> m2;
+
+    Student student1(nama, m1, m2);
+
+    student1.disp();
+    return 0;
+}
+```
+### nomor 4
+```
+#include <iostream>
+using namespace std;
+
+class operasi{
+	public:
+	double x,y;
+
+	operasi(double nx, double ny){
+	x=nx;
+    y=ny;
+    }
+
+    double Printsum(){
+        return(x+y);
+    }
+
+};
+
+int main(){
+
+	double num1,num2,num3,num4,real,imagin;
+
+	cout<< "real1: ";
+	cin>> num1;
+	cout<< "imagin1: ";
+	cin>> num2;
+    operasi number1(num1,num2);
+
+	cout<< "real2: ";
+	cin>> num3;
+	cout<< "imagin2: ";
+	cin>> num4;
+	operasi number2(num3,num4);
+
+    cout<<number1.Printsum()<<endl;
+    cout<<number2.Printsum()<<endl;
+
+    return 0;
+}
+```
+# Tugas Magang
+### nomor 1
+```
+#include <iostream>
+using namespace std;
+
+class Shape {
+    public:
+    double width, height;
+	void set (double a, double b) // bentuk punya panjang dan lebar
+	{
+		width = a;
+		height = b;
+	}
+};
+
+class Rectangle: public Shape{ // rumus luas kotak
+    public:
+	double area (){
+		return (width * height);
+	}
+};
+
+class Triangle: public Shape{ //rumus luas segitiga
+    public:
+	double area (){
+		return (width * height / 2);
+	}
+};
+
+int main (){
+
+	Rectangle kotak;
+	Triangle segi3;
+
+	kotak.set(10,9); //panhang dan lebar dimasukin
+	segi3.set(7,1);
+
+	cout <<kotak.area()<<endl; //ngeluarin hasil
+	cout <<segi3.area()<<endl; //ngeluarin hasil
+	return 0;
+}
+```
+### nomor 2
+```
+#include <iostream>
+using namespace std;
+
+class mother{
+public:
+	void display ()
+	{
+		cout << "";
+	}
+};
+
+class daughter : public mother{
+public:
+	void display ()
+	{
+		cout << "daughteru: emak dimana aaaaaaaaaaaa";
+	}
+};
+
+int main (){
+	//mother inem;
+	//inem.display();
+	
+	daughter santi;
+	santi.display(); 
+	return 0;
+}
+```
+### nomor 3 versi 1
+```
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Animal{
+	public:
+	int age; 
+	string name;
+	string origin;
+	void set_data (int a, string b, string c){
+		age = a;
+		name = b;
+		origin = c;
+	}
+};
+
+class Zebra:public Animal{
+	public:
+	void biodata(){
+		cout<< "nama zebra ini "<< name<<" umurnya "<< age << " tahun "<< "lahir di "<< origin<< endl;
+	}
+};
+
+class Dolphin: public Animal{
+	public:
+	void biodata(){
+		cout<< "nama lumba-lumba ini "<< name<<" umurnya "<< age << " tahun "<< "lahir di "<< origin<< endl;
+	}
+};
+
+int main ()
+{
+	Zebra zeb;
+	Dolphin dol;
+
+	string n1="Ket";
+	string n2="Lucia";
+	string w1="africa";
+	string w2="laut";
+
+	zeb.set_data (5,n1,w1);
+	dol.set_data (2,n2,w2);
+
+	zeb.biodata();
+	dol.biodata();
+	return 0;
+}
+```
+### nomor 3 versi 2
+```
+#include <iostream>
+#include <string>
+using namespace std;
+
+class hewan{
+    public:
+    string nama;
+    int age;
+    string asal;
+    void set_value(string b,int a,string c){
+        nama = b;
+        age = a;
+        asal = c;
+    }
+};
+
+class zebra : public hewan{
+    public:
+    void biodata(){
+        cout << "nama zebra ini "<< nama << " umurnya " << age << "tahun."<< " lahir di "<< asal <<endl;
+    }
+};
+
+class dolphin : public hewan{
+    public:
+    void biodata(){
+        cout << "nama lumba-lumba ini "<< nama << " umurnya " << age << "tahun."<< " lahir di "<< asal <<endl;
+    }
+};
+
+int main(){
+    string nama;
+    int umur;
+    string kampung;
+
+    zebra OwO;
+    cout<<"this zebra name is: "<<endl;
+    cin>>nama;
+    cout<<"this zebra age is: "<<endl;
+    cin>>umur;
+    cout<<"this zebra origin is: "<<endl;
+    cin>>kampung;
+    OwO.set_value(nama,umur,kampung);
+    OwO.biodata();
+
+    dolphin uwu;
+    cin>>nama;
+    cout<<"this dolphin name is: "<<endl;
+    cin>>umur;
+    cout<<"this dolphin age is: "<<endl;
+    cin>>kampung;
+    cout<<"this dolphin origin is: "<<endl;
+    uwu.set_value(nama,umur,kampung);
+    uwu.biodata();
+}
+```
